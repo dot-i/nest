@@ -9,6 +9,7 @@ import {
   CANCEL_EVENT,
   GRPC_DEFAULT_MAX_RECEIVE_MESSAGE_LENGTH,
   GRPC_DEFAULT_MAX_SEND_MESSAGE_LENGTH,
+  GRPC_DEFAULT_MAX_METADATA_SIZE,
   GRPC_DEFAULT_PROTO_LOADER,
   GRPC_DEFAULT_URL,
 } from '../constants';
@@ -335,6 +336,11 @@ export class ServerGrpc extends Server implements CustomTransportStrategy {
         this.options,
         'maxReceiveMessageLength',
         GRPC_DEFAULT_MAX_RECEIVE_MESSAGE_LENGTH,
+      ),
+      'grpc.max_metadata_size': this.getOptionsProp(
+        this.options,
+        'maxMetadataSize',
+        GRPC_DEFAULT_MAX_METADATA_SIZE,
       ),
     });
     const credentials = this.getOptionsProp(this.options, 'credentials');

@@ -5,6 +5,7 @@ import { Observable, Subscription } from 'rxjs';
 import {
   GRPC_DEFAULT_MAX_RECEIVE_MESSAGE_LENGTH,
   GRPC_DEFAULT_MAX_SEND_MESSAGE_LENGTH,
+  GRPC_DEFAULT_MAX_METADATA_SIZE,
   GRPC_DEFAULT_PROTO_LOADER,
   GRPC_DEFAULT_URL,
 } from '../constants';
@@ -66,6 +67,7 @@ export class ClientGrpcProxy extends ClientProxy implements ClientGrpc {
     }
     const maxSendMessageLengthKey = 'grpc.max_send_message_length';
     const maxReceiveMessageLengthKey = 'grpc.max_receive_message_length';
+    const maxMetadataSizeKey = 'grpc.max_metadata_size';
     const maxMessageLengthOptions = {
       [maxSendMessageLengthKey]: this.getOptionsProp(
         this.options,
@@ -76,6 +78,11 @@ export class ClientGrpcProxy extends ClientProxy implements ClientGrpc {
         this.options,
         'maxReceiveMessageLength',
         GRPC_DEFAULT_MAX_RECEIVE_MESSAGE_LENGTH,
+      ),
+      [maxMetadataSizeKey]: this.getOptionsProp(
+        this.options,
+        'maxMetadataSize',
+        GRPC_DEFAULT_MAX_METADATA_SIZE,
       ),
     };
 
