@@ -14,7 +14,7 @@
     "url": "https://github.com/nestjs/nest"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://nexus.qover.io/repository/npm-hosted/"
   },
   "dependencies": {
     "fastify": "2.11.0",

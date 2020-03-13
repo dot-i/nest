@@ -13,7 +13,7 @@
     "url": "https://github.com/nestjs/nest"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://nexus.qover.io/repository/npm-hosted/"
   },
   "license": "MIT",
   "dependencies": {

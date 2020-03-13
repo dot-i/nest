@@ -31,6 +31,7 @@ export interface GrpcOptions {
     url?: string;
     maxSendMessageLength?: number;
     maxReceiveMessageLength?: number;
+    maxMetadataSize?: number;
     keepalive?: {
       keepaliveTimeMs?: number;
       keepaliveTimeoutMs?: number;
