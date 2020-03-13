@@ -1,6 +1,6 @@
 {
   "name": "@nestjs/platform-express",
-  "version": "6.11.11",
+  "version": "6.11.12-q03",
   "description": "Nest - modern, fast, powerful node.js web framework (@platform-express)",
   "author": "Kamil Mysliwiec",
   "license": "MIT",
